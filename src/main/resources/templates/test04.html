@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<p>th:value sample</p>
+
+<p>getterがある場合はエラーにならない、getterが無いとエラー</p>
+
+<input type="text" th:value="${a.b.c.value}" />
+
+</body>
+</html>
