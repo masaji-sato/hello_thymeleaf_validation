@@ -10,18 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class TestController {
 
 
-    // mapping. no setter, no public access modifier
-    @GetMapping(value = "/hasgetter/test")
-    String get() {
-        return "test";
-    }
-    @PostMapping(value = "hasgetter/test")
-    String post(@ModelAttribute com.example.model.hasgetter.A a, Model model) {
-        return "test";
-    }
-
-
-
     // th:object example
     @GetMapping(value = "/hasgetter/test02")
     String getTest02(@ModelAttribute com.example.model.hasgetter.A a, Model model) {
@@ -68,7 +56,7 @@ public class TestController {
 
 
 
-    // th:text example
+    // th:value example
     @GetMapping(value = "/hasgetter/test04")
     String getTest04HasGetter(@ModelAttribute com.example.model.hasgetter.A a, Model model) {
         model.addAttribute("a", new com.example.model.hasgetter.A());
